@@ -1,7 +1,6 @@
 package com.test.spotify.model;
 
-import java.time.LocalDate;
-
+import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,14 +16,14 @@ import lombok.Data;
 @Entity
 @Table(name = "call")
 public class Call {
-    
+
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "date_call")
     @JsonFormat(pattern = "dd/MM/yyyy hh:mm:ss")
-    private LocalDate date;
+    private LocalDateTime date;
 
     @Column(name = "city_name")
     private String cityName;
