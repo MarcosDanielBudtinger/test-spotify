@@ -1,4 +1,4 @@
-package com.test.spotify.service;
+package com.test.spotify.weathermapintegration;
 
 
 import com.test.spotify.dto.WeatherResponse;

@@ -5,14 +5,15 @@ import java.util.List;
 import com.test.spotify.dto.WeatherResponse;
 import com.test.spotify.event.CallMadeEvent;
 import com.test.spotify.service.CallService;
-import com.test.spotify.service.WeatherResponseService;
-import com.test.spotify.service.WeatherService;
 import com.test.spotify.spotifyintegration.dto.AlbumDTO;
 import com.test.spotify.spotifyintegration.service.SearchAlbumsService;
+import com.test.spotify.weathermapintegration.WeatherResponseService;
+import com.test.spotify.weathermapintegration.WeatherService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

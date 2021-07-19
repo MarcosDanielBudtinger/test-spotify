@@ -1,6 +1,6 @@
 package com.test.spotify;
 
-import com.test.spotify.service.WeatherService;
+import com.test.spotify.weathermapintegration.WeatherService;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

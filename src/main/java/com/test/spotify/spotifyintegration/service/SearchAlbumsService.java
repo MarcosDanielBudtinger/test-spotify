@@ -27,7 +27,7 @@ public class SearchAlbumsService {
  
   private List<AlbumDTO> searchAlbums_Sync(SpotifyApi spotifyApi, String album) {
     try {
-      SearchAlbumsRequest searchAlbumsRequest = spotifyApi.searchAlbums(album).limit(10).offset(0).build();
+      SearchAlbumsRequest searchAlbumsRequest = spotifyApi.searchAlbums(album).limit(12).offset(0).build();
       final Paging<AlbumSimplified> albumSimplifiedPaging = searchAlbumsRequest.execute();
 
       AlbumSimplified[] lAlbum = albumSimplifiedPaging.getItems();

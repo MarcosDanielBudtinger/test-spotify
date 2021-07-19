@@ -1,4 +1,4 @@
-package com.test.spotify.service;
+package com.test.spotify.weathermapintegration;
 
 import org.springframework.stereotype.Service;
 

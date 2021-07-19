@@ -2,7 +2,7 @@ package com.test.spotify;
 
 import com.test.spotify.dto.WeatherResponse;
 import com.test.spotify.resource.WeatherResource;
-import com.test.spotify.service.WeatherService;
+import com.test.spotify.weathermapintegration.WeatherService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
