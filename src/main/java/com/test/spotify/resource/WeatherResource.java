@@ -13,19 +13,17 @@ import com.test.spotify.weathermapintegration.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 
 @RestController
 @RequestMapping("weather")
 public class WeatherResource {
 
     @Autowired
-    private  WeatherResponseService weatherResponseService;
+    private WeatherResponseService weatherResponseService;
 
     @Autowired
     private WeatherService service;
@@ -43,10 +41,10 @@ public class WeatherResource {
     public ResponseEntity<?> getWeather(@PathVariable String cityName) {
         WeatherResponse weatherResponse = weatherResponseService.getWeather(cityName);
         String genre = service.returnTracks(weatherResponse.getMain().getTemp());
-        publisher.publishEvent(new CallMadeEvent(this, callService.createNewCall(cityName)));
+        publisher.publishEvent(new CallMadeEvent(this,
+                callService.createNewCall(cityName, weatherResponse.getMain().getTemp(), genre)));
         List<AlbumDTO> lAlbum = searchAlbumsService.getAlbums(genre);
         return ResponseEntity.ok(lAlbum);
     }
-   
-}
 
+}

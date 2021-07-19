@@ -18,7 +18,7 @@ import lombok.Data;
 public class Call {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "date_call")
@@ -27,4 +27,10 @@ public class Call {
 
     @Column(name = "city_name")
     private String cityName;
+
+    @Column(name = "temperature")
+    private double temperature;
+
+    @Column(name = "genre")
+    private String genre;
 }
