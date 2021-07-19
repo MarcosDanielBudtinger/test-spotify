@@ -21,5 +21,5 @@ as faixas como parte da lista de reprodução.
 `Spring data Jpa`
 `Spring Cloud OpenFeign`
 `Java`
-`Flyway` para versionamento do banco de dados.
+`Flyway`
 
