@@ -16,9 +16,10 @@ buscar dados de temperatura e Spotify (https://developer.spotify.com) para suger
 as faixas como parte da lista de reprodução.
 
 ## Tecnologias utilizadas
-Spring boot
-Spring security
-Spring data Jpa
-Spring Cloud OpenFeign
-Java
+`Spring boot`
+`Spring security`
+`Spring data Jpa`
+`Spring Cloud OpenFeign`
+`Java`
+`Flyway` para versionamento do banco de dados.
 
